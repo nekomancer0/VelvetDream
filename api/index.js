@@ -3,15 +3,12 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
-import dotenv from "dotenv";
+const dotenv = require("dotenv");
 dotenv.config();
-console.log(process.env.MAILTRAP_TOKEN);
-import { MailtrapClient } from "mailtrap";
+const { MailtrapClient } = require("mailtrap");
 
-let client = new MailtrapClient({
+const client = new MailtrapClient({
   token: process.env.MAILTRAP_TOKEN,
-  testInboxId: 3370670,
-  accountId: 2085654,
 });
 
 app.use(express.json());
@@ -19,25 +16,26 @@ app.use(express.urlencoded({ extended: true }));
 
 app.post("/mail", async (req, res) => {
   const formData = req.body;
-  console.log(formData);
-  await client.testing.send({
-    from: {
-      name: formData.name,
-      email: formData.email,
+
+  const sender = {
+    email: "contact@velvetdream.eu",
+    name: "Mailtrap Test",
+  };
+  const recipients = [
+    {
+      email: "nekomancers0@gmail.com",
     },
-    to: [
-      {
-        email: "contact.velvetdream@gmail.com",
-        name: "VelvetDream",
-      },
-    ],
-    subject: `Message from ${formData.name}`,
-    text: `
-        Name: ${formData.name}
-        Email: ${formData.email}
-        Message: ${formData.message}
-      `,
-  });
+  ];
+
+  client
+    .send({
+      from: sender,
+      to: recipients,
+      subject: `Message from ${formData.name}`,
+      text: `Name: ${formData.name} \nEmail: ${formData.email} \nMessage: ${formData.message}`,
+    })
+    .then(console.log, console.error);
+
   console.log(req.body);
   res.send("success");
 });
