@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const HeroWrapper = styled.section`
   background-color: var(--color-dark);
@@ -35,10 +35,7 @@ function Hero() {
   return (
     <HeroWrapper>
       <HeroContent>
-        <Logo 
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VelvetDream%20Logo-zsJXjC8rHg2FzxPSPk8LSFJUE8zroO.png" 
-          alt="VelvetDream" 
-        />
+        <Logo src="/logo.png" alt="VelvetDream" />
         <HeroSubtitle>Where imagination knows no bounds</HeroSubtitle>
       </HeroContent>
     </HeroWrapper>
@@ -46,4 +43,3 @@ function Hero() {
 }
 
 export default Hero;
-

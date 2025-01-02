@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const HeaderWrapper = styled.header`
   background-color: var(--color-light);
   padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
 const Nav = styled.nav`
@@ -46,13 +46,21 @@ function Header() {
     <HeaderWrapper>
       <Nav>
         <Link to="/">
-          <Logo src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VelvetDream%20Logo-zsJXjC8rHg2FzxPSPk8LSFJUE8zroO.png" alt="VelvetDream Logo" />
+          <Logo src="/logo.png" alt="VelvetDream Logo" />
         </Link>
         <NavLinks>
-          <NavItem><NavLink to="/">Home</NavLink></NavItem>
-          <NavItem><NavLink to="/about">About</NavLink></NavItem>
-          <NavItem><NavLink to="/projects">Projects</NavLink></NavItem>
-          <NavItem><NavLink to="/contact">Contact</NavLink></NavItem>
+          <NavItem>
+            <NavLink to="/">Home</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to="/about">About</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to="/projects">Projects</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to="/contact">Contact</NavLink>
+          </NavItem>
         </NavLinks>
       </Nav>
     </HeaderWrapper>
@@ -60,4 +68,3 @@ function Header() {
 }
 
 export default Header;
-

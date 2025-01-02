@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import ProjectCard from '../components/ProjectCard';
+import React from "react";
+import styled from "styled-components";
+import ProjectCard from "../components/ProjectCard";
 
 const ProjectsWrapper = styled.div`
   max-width: 1200px;
@@ -24,21 +24,24 @@ const ProjectGrid = styled.div`
 const projects = [
   {
     id: 1,
-    title: 'Raoronia Chronicles',
-    description: 'An immersive board game set in the magical world of Raoronia.',
-    image: 'https://picsum.photos/600/400',
+    title: "Example Project 1",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    image: "https://picsum.photos/600/400",
   },
   {
     id: 2,
-    title: 'Fluffy Adventures',
-    description: 'A heartwarming animated series following the journey of diverse characters.',
-    image: 'https://picsum.photos/600/400',
+    title: "Example Project 2",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    image: "https://picsum.photos/600/400",
   },
   {
     id: 3,
-    title: 'Dreamscape VR',
-    description: 'A virtual reality experience that brings Raoronia to life.',
-    image: 'https://picsum.photos/600/400',
+    title: "Example Project 3",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    image: "https://picsum.photos/600/400",
   },
 ];
 
@@ -47,7 +50,7 @@ function Projects() {
     <ProjectsWrapper>
       <ProjectsTitle>Our Projects</ProjectsTitle>
       <ProjectGrid>
-        {projects.map(project => (
+        {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </ProjectGrid>
@@ -56,4 +59,3 @@ function Projects() {
 }
 
 export default Projects;
-

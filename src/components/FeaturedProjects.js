@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import ProjectCard from './ProjectCard';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import ProjectCard from "./ProjectCard";
 
 const ProjectsWrapper = styled.section`
   padding: 4rem 0;
@@ -43,15 +43,17 @@ const ViewAllLink = styled(Link)`
 const featuredProjects = [
   {
     id: 1,
-    title: 'Raoronia Chronicles',
-    description: 'An immersive board game set in the magical world of Raoronia.',
-    image: 'https://picsum.photos/600/400',
+    title: "Example Project 1",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    image: "https://picsum.photos/600/400",
   },
   {
     id: 2,
-    title: 'Fluffy Adventures',
-    description: 'A heartwarming animated series following the journey of diverse characters.',
-    image: 'https://picsum.photos/600/400',
+    title: "Example Project 2",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    image: "https://picsum.photos/600/400",
   },
 ];
 
@@ -61,7 +63,7 @@ function FeaturedProjects() {
       <ProjectsContent>
         <ProjectsTitle>Featured Projects</ProjectsTitle>
         <ProjectGrid>
-          {featuredProjects.map(project => (
+          {featuredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </ProjectGrid>
@@ -72,4 +74,3 @@ function FeaturedProjects() {
 }
 
 export default FeaturedProjects;
-
