@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "./logo.png";
 
 const HeroWrapper = styled.section`
   background-color: var(--color-dark);
@@ -36,7 +35,7 @@ function Hero() {
   return (
     <HeroWrapper>
       <HeroContent>
-        <Logo src={logo} alt="VelvetDream" />
+        <Logo src={process.env.PUBLIC_URL + "/logo.png"} alt="VelvetDream" />
         <HeroSubtitle>Where imagination knows no bounds</HeroSubtitle>
       </HeroContent>
     </HeroWrapper>

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import icon from "./icon.png";
 
 const HeaderWrapper = styled.header`
   background-color: var(--color-light);
@@ -47,7 +46,10 @@ function Header() {
     <HeaderWrapper>
       <Nav>
         <Link to="/">
-          <Logo src={icon} alt="VelvetDream Logo" />
+          <Logo
+            src={process.env.PUBLIC_URL + "/icon.png"}
+            alt="VelvetDream Logo"
+          />
         </Link>
         <NavLinks>
           <NavItem>
