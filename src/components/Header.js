@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import icon from "../assets/icon.png";
+import icon from "./icon.png";
 
 const HeaderWrapper = styled.header`
   background-color: var(--color-light);
