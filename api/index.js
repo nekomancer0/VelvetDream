@@ -19,7 +19,7 @@ app.post("/mail", async (req, res) => {
 
   const sender = {
     email: formData.email,
-    name: "Mailtrap Test",
+    name: formData.name,
   };
   const recipients = [
     {
