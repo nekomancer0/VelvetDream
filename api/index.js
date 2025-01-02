@@ -27,14 +27,12 @@ app.post("/mail", async (req, res) => {
     },
   ];
 
-  client
-    .send({
-      from: sender,
-      to: recipients,
-      subject: `Message from ${formData.name}`,
-      text: `Name: ${formData.name} \nEmail: ${formData.email} \nMessage: ${formData.message}`,
-    })
-    .then(console.log, console.error);
+  await client.send({
+    from: sender,
+    to: recipients,
+    subject: `Message from ${formData.name}`,
+    text: `Name: ${formData.name} \nEmail: ${formData.email} \nMessage: ${formData.message}`,
+  });
 
   console.log(req.body);
   res.send("success");
