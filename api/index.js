@@ -18,12 +18,12 @@ app.post("/mail", async (req, res) => {
   const formData = req.body;
 
   const sender = {
-    email: "contact@velvetdream.eu",
+    email: formData.email,
     name: "Mailtrap Test",
   };
   const recipients = [
     {
-      email: "nekomancers0@gmail.com",
+      email: "contact.velvetdream@gmail.com",
     },
   ];
 
