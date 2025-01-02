@@ -20,8 +20,8 @@ app.post("/mail", async (req, res) => {
   console.log(req.body);
 
   const sender = {
-    email: `website@velvetdream.eu`,
-    name: formData.name,
+    email: `hello@velvetdream.eu`,
+    name: `${formData.name}`,
   };
   const recipients = [
     {
