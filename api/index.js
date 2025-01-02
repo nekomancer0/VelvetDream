@@ -17,6 +17,8 @@ app.use(express.urlencoded({ extended: true }));
 app.post("/mail", async (req, res) => {
   const formData = req.body;
 
+  console.log(req.body);
+
   const sender = {
     email: formData.email,
     name: formData.name,
@@ -34,7 +36,6 @@ app.post("/mail", async (req, res) => {
     text: `Name: ${formData.name} \nEmail: ${formData.email} \nMessage: ${formData.message}`,
   });
 
-  console.log(req.body);
   res.send("success");
 });
 
