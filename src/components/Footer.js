@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const FooterWrapper = styled.footer`
   background-color: var(--color-dark);
@@ -71,30 +71,47 @@ function Footer() {
         <FooterSection>
           <h3>Quick Links</h3>
           <FooterLinks>
-            <li><FooterLink to="/">Home</FooterLink></li>
-            <li><FooterLink to="/about">About</FooterLink></li>
-            <li><FooterLink to="/projects">Projects</FooterLink></li>
-            <li><FooterLink to="/contact">Contact</FooterLink></li>
+            <li>
+              <FooterLink to="/">Home</FooterLink>
+            </li>
+            <li>
+              <FooterLink to="/about">About</FooterLink>
+            </li>
+            <li>
+              <FooterLink to="/projects">Projects</FooterLink>
+            </li>
+            <li>
+              <FooterLink to="/contact">Contact</FooterLink>
+            </li>
           </FooterLinks>
         </FooterSection>
         <FooterSection>
           <h3>Connect With Us</h3>
           <SocialIcons>
-            <SocialIcon href="#" target="_blank" rel="noopener noreferrer"><FaFacebookF /></SocialIcon>
-            <SocialIcon href="#" target="_blank" rel="noopener noreferrer"><FaTwitter /></SocialIcon>
-            <SocialIcon href="#" target="_blank" rel="noopener noreferrer"><FaInstagram /></SocialIcon>
+            <SocialIcon
+              href="https://x.com/velvetdream_off"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter />
+            </SocialIcon>
+            <SocialIcon
+              href="https://www.instagram.com/velvetdream.off/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </SocialIcon>
           </SocialIcons>
         </FooterSection>
         <FooterSection>
           <h3>Contact Us</h3>
-          <p>Email: info@velvetdream.com</p>
-          <p>Address: 123 Dream Street, Dreamland, DL 12345</p>
+          <p>Email: contact@velvetdream.eu</p>
         </FooterSection>
       </FooterContent>
-      <Copyright>&copy; 2023 VelvetDream. All rights reserved.</Copyright>
+      <Copyright>&copy; 2024-2025 VelvetDream. All rights reserved.</Copyright>
     </FooterWrapper>
   );
 }
 
 export default Footer;
-
